@@ -1,63 +1,316 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de la Página</title>
-    <meta name="description" content="Descripción breve para SEO.">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            color:red;
-            text-emphasis-style: none;
-            background-color: rgb(0, 102, 255);
-        }
-        #img{
-            width: 500px;
-            height: 500px;
-        }
-        .header{
-            left: 100px;
-            border: 10px solid black;
-            color: white;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rayo Energy | Sitio Oficial</title>
+
+<meta name="description" content="Página oficial de Rayo Energy. Innovación, velocidad y potencia.">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#0f172a;
+    color:white;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#0066ff,#00c3ff);
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,0.3);
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffe600;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 8%;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+    url("image-rayo.jpg") center/cover;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+    color:#ddd;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ffe600;
+    color:#000;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:700;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    background:white;
+}
+
+/* SECCIONES */
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#00c3ff;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#334155;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#00c3ff;
+}
+
+/* GALERÍA */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+    color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Mi Sitio Web</h1>
-        <img id="img"src="image-rayo.jpg" alt="">
-        <img src="rayo1.png" alt="imaagen de RAYO">
-        <nav>S
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- HEADER -->
 
-    <main>
-        <article>
-            <h2>Título del Artículo</h2>
-            <p>Contenido principal de la página...</p>
-        </article>
-        
-        <aside>
-            <h3>Enlaces de interés</h3>
-            <p>Contenido lateral o publicidad.</p>
-        </aside>
-    </main>
+<header>
 
-    <footer>
-        <p>&copy; 2026 Mi Nombre/Empresa</p>
-    </footer>
+    <div class="logo">⚡ Rayo Energy</div>
 
-    <!-- Scripts JavaScript al final -->
-    <script src="script.js"></script>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Galería</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Velocidad. Energía. Innovación.</h1>
+
+        <p>
+            Bienvenido a una experiencia web moderna y profesional.
+            Descubre el poder del diseño elegante y responsivo.
+        </p>
+
+        <a href="#" class="btn">Explorar Ahora</a>
+
+    </div>
+
+</section>
+
+<!-- SERVICIOS -->
+
+<section>
+
+    <h2 class="section-title">Nuestros Servicios</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>⚡ Energía</h3>
+            <p>Soluciones rápidas y eficientes para tus proyectos digitales.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Innovación</h3>
+            <p>Tecnología moderna y diseño atractivo para destacar.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Diseño</h3>
+            <p>Interfaces visuales profesionales y completamente responsivas.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALERÍA -->
+
+<section>
+
+    <h2 class="section-title">Galería</h2>
+
+    <div class="gallery">
+
+        <img src="image-rayo.jpg" alt="Imagen principal">
+
+        <img src="rayo1.png" alt="Imagen secundaria">
+
+        <img src="image-rayo.jpg" alt="Imagen extra">
+
+    </div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section>
+
+    <h2 class="section-title">Contacto</h2>
+
+    <div class="card">
+
+        <p><strong>Email:</strong> contacto@rayoenergy.com</p>
+        <p><strong>Teléfono:</strong> +57 300 000 0000</p>
+        <p><strong>Ubicación:</strong> Colombia</p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Rayo Energy | Todos los derechos reservados
+    </p>
+
+</footer>
+
 </body>
 </html>
